@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Specifying Color with RGBa, HSLa, Hexadecimal, and CSS Filters</title>
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/base.css" rel="stylesheet">
+	<style>
+		/* I picked #294e89 for American Anthem and took lighter shades of it. I used different formats of the same color on other steps */
+
+		/* STEP 1: Using the color picker utility at
+		https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool,
+		set each color in hexadecimal format
+		to match as closely as you can with the colors
+		on the paint swatch card provided.
+		-------------------------------------------------- */
+		#hex div:nth-of-type(1) {
+			background-color: #294e89;
+		}
+
+		#hex div:nth-of-type(2) {
+			background-color: #294e89cc;
+		}
+
+		#hex div:nth-of-type(3) {
+			background-color: #294e8999;
+		}
+
+		#hex div:nth-of-type(4) {
+			background-color: #294e8966;
+		}
+
+		#hex div:nth-of-type(5) {
+			background-color: #294e894d;
+		}
+
+		#hex div:nth-of-type(6) {
+			background-color: #294e8933;
+		}
+
+		/* STEP 2: Set each color in rgba format
+		to match as closely as you can with the colors
+		on the paint swatch card provided.
+		-------------------------------------------------- */
+		#rgba div:nth-of-type(1) {
+			background-color: rgba(41, 78, 137, 1);
+		}
+
+		#rgba div:nth-of-type(2) {
+			background-color: rgba(41, 78, 137, 0.8);
+		}
+
+		#rgba div:nth-of-type(3) {
+			background-color: rgba(41, 78, 137, 0.6);
+		}
+
+		#rgba div:nth-of-type(4) {
+			background-color: rgba(41, 78, 137, 0.4);
+		}
+
+		#rgba div:nth-of-type(5) {
+			background-color: rgba(41, 78, 137, 0.3);
+		}
+
+		#rgba div:nth-of-type(6) {
+			background-color: rgba(41, 78, 137, 0.2);
+		}
+
+		/* STEP 3: Set each color in hsla format
+		to match as closely as you can with the colors
+		on the paint swatch card provided - but the
+		background pattern must be visible.
+		-------------------------------------------------- */
+		#hsla div:nth-of-type(1) {
+			background-color: hsl(217deg 54% 35%);
+		}
+
+		#hsla div:nth-of-type(2) {
+			background-color: hsl(217deg 54% 35% / 80%);
+		}
+
+		#hsla div:nth-of-type(3) {
+			background-color: hsl(217deg 54% 35% / 60%);
+		}
+
+		#hsla div:nth-of-type(4) {
+			background-color: hsl(217deg 54% 35% / 40%);
+		}
+
+		#hsla div:nth-of-type(5) {
+			background-color: hsl(217deg 54% 35% / 30%);
+		}
+
+		#hsla div:nth-of-type(6) {
+			background-color: hsl(217deg 54% 35% / 20%);
+		}
+
+		/* I tried to pick different color and apply different filters for every shade. Colors are off but they are sorted from darker to ligter */
+
+		/* STEP 4: Set each color using a CSS color keywords
+		(https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
+		that matches each color as closely as possible, then
+		apply one or more CSS filters to see if you can
+		produce an exact rendition of the swatch color
+		(https://developer.mozilla.org/en-US/docs/Web/CSS/filter).
+		-------------------------------------------------- */
+		#opacity div:nth-of-type(1) {
+			background-color: royalblue;
+			filter: brightness(90%) contrast(120%);
+		}
+
+		#opacity div:nth-of-type(2) {
+			background-color: DodgerBlue;
+			filter: brightness(0.8) saturate(1.2) hue-rotate(10deg);
+
+		}
+
+		#opacity div:nth-of-type(3) {
+			background-color: CornflowerBlue;
+			filter: brightness(0.95) saturate(1.05) hue-rotate(3deg);
+		}
+
+		#opacity div:nth-of-type(4) {
+			background-color: skyblue;
+			filter: brightness(100%) contrast(115%) saturate(105%);
+
+		}
+
+		#opacity div:nth-of-type(5) {
+			background-color: lightskyblue;
+			filter: brightness(105%) contrast(90%) saturate(100%);
+		}
+
+		#opacity div:nth-of-type(6) {
+			background-color: AliceBlue;
+			filter: brightness(90%) contrast(105%) saturate(95%);
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>Specifying Color <em>with</em> <abbr title="Red, Green, Blue, Alpha">RGBa</abbr>, <abbr
+				title="Hue, Saturation, Luminousity, Alpha">HSLa</abbr>, Hexadecimal, <em>and</em> CSS Filters</h1>
+	</header>
+	<main>
+		<!-- I changed the headers according to their names -->
+		<section id="hex">
+			<h2>Hexadecimal</h2>
+			<div>
+				<h3>American Anthem</h3>
+			</div>
+			<div>
+				<h3>Castle Moat</h3>
+			</div>
+			<div>
+				<h3>Cornflower Blue</h3>
+			</div>
+			<div>
+				<h3>Ocean Dream</h3>
+			</div>
+			<div>
+				<h3>Rain Song</h3>
+			</div>
+			<div>
+				<h3>Icy Bay</h3>
+			</div>
+		</section>
+		<section id="rgba">
+			<h2>RGB(A)</h2>
+			<div>
+				<h3>American Anthem</h3>
+			</div>
+			<div>
+				<h3>Castle Moat</h3>
+			</div>
+			<div>
+				<h3>Cornflower Blue</h3>
+			</div>
+			<div>
+				<h3>Ocean Dream</h3>
+			</div>
+			<div>
+				<h3>Rain Song</h3>
+			</div>
+			<div>
+				<h3>Icy Bay</h3>
+			</div>
+		</section>
+		<section id="hsla">
+			<h2>HSL(A)</h2>
+			<div>
+				<h3>American Anthem</h3>
+			</div>
+			<div>
+				<h3>Castle Moat</h3>
+			</div>
+			<div>
+				<h3>Cornflower Blue</h3>
+			</div>
+			<div>
+				<h3>Ocean Dream</h3>
+			</div>
+			<div>
+				<h3>Rain Song</h3>
+			</div>
+			<div>
+				<h3>Icy Bay</h3>
+			</div>
+		</section>
+		<section id="opacity">
+			<h2>Keyword/Filter</h2>
+			<div>
+				<h3>American Anthem</h3>
+			</div>
+			<div>
+				<h3>Castle Moat</h3>
+			</div>
+			<div>
+				<h3>Cornflower Blue</h3>
+			</div>
+			<div>
+				<h3>Ocean Dream</h3>
+			</div>
+			<div>
+				<h3>Rain Song</h3>
+			</div>
+			<div>
+				<h3>Icy Bay</h3>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p><small>Colors based on CIL color paint swatch cards</small></p>
+	</footer>
+</body>
+
+</html>
